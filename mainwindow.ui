@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>368</height>
+    <width>884</width>
+    <height>426</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>170</x>
       <y>0</y>
       <width>20</width>
-      <height>341</height>
+      <height>401</height>
      </rect>
     </property>
     <property name="orientation">
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
+      <y>120</y>
       <width>160</width>
       <height>145</height>
      </rect>
@@ -100,7 +100,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
+      <y>100</y>
       <width>161</width>
       <height>20</height>
      </rect>
@@ -114,24 +114,11 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>162</width>
-      <height>56</height>
+      <width>161</width>
+      <height>91</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
@@ -160,13 +147,34 @@
        </item>
       </layout>
      </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="radioButton_4">
+         <property name="text">
+          <string>Год</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="text">
+          <string>Население</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
     </layout>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
+      <y>260</y>
       <width>161</width>
       <height>20</height>
      </rect>
@@ -179,9 +187,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>250</y>
-      <width>160</width>
-      <height>91</height>
+      <y>280</y>
+      <width>161</width>
+      <height>120</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -200,6 +208,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>Вставки</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton_6">
        <property name="text">
         <string>Сортировка Шелла</string>
@@ -213,10 +228,18 @@
      <rect>
       <x>190</x>
       <y>10</y>
-      <width>601</width>
-      <height>301</height>
+      <width>681</width>
+      <height>351</height>
      </rect>
     </property>
+    <column>
+     <property name="text">
+      <string>Сортировка</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
     <column>
      <property name="text">
       <string>Кол-во элементов</string>
@@ -261,8 +284,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>320</y>
+      <x>780</x>
+      <y>370</y>
       <width>89</width>
       <height>25</height>
      </rect>
