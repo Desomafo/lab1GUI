@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+
 namespace Ui {
 class MainWindow;
 }
@@ -13,6 +14,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    int *arrayGeneration();
     ~MainWindow();
 
 private slots:
@@ -23,8 +25,6 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_6_clicked();
-
-    void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
 
