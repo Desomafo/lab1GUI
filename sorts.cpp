@@ -75,55 +75,33 @@ void ShellSort(int a[], int n, long long &iterations, long long &compares)
     }
 }
 
-void quickSort(int *numbers, int left, int right, long long &iterations, long long &compares) {
-
-    int pivot;
-    int l_hold = left;
-    int r_hold = right;
-    pivot = numbers[left];
-
-    while (left < right) {
-      while ((numbers[right] >= pivot) && (left < right)) {
-        right--;
+void quickSort(int *arr, int left, int right, long long &iterations, long long &compares) {
+    int pivot, tmp;
+    int i = left, j = right;
+    pivot = arr[(left + right) / 2];
+    /* partition */
+    while (i <= j) {
         iterations++;
-      }
-      if (left != right) {
-        numbers[left] = numbers[right];
-        left++;
-        compares++;
-      }
-      while ((numbers[left] <= pivot) && (left < right)) {
-        left++;
-        iterations++;
-      }
-      if (left != right) {
-        numbers[right] = numbers[left];
-        right--;
-        compares++;
-      }
-      iterations++;
-    }
-    numbers[left] = pivot;
-    pivot = left;
-    left = l_hold;
-    right = r_hold;
-    compares++;
-
-//    static long long *iters_comps = new long long[2];
-//    iters_comps[0] = 0;
-//    iters_comps[1] = 0;
-
-    if (left < pivot)
-      quickSort(numbers, left, pivot - 1, iterations, compares);
-    if (right > pivot)
-      quickSort(numbers, pivot + 1, right, iterations, compares);
-
-//    if (!(left < pivot) && !(right > pivot)) {
-//        iters_comps[0] = iterations;
-//        iters_comps[1] = compares;
-//        return iters_comps;
-//    }
-
-//    return iters_comps;
-
+        while (arr[i] < pivot) {
+            i++;
+            iterations++;
+        }
+        while (arr[j] > pivot) {
+            j--;
+            iterations++;
+        }
+        if (i <= j) {
+            compares++;
+            tmp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = tmp;
+            i++;
+            j--;
+        }
+    };
+    /* recursion */
+    if (left < j)
+        quickSort(arr, left, j, iterations, compares);
+    if (i < right)
+        quickSort(arr, i, right, iterations, compares);
 }
